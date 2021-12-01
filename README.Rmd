@@ -1,0 +1,25 @@
+---
+title: "First Attempt At Git"
+output: github_document
+---
+# Welcome
+This is a lovely little README!
+
+# Drugs!
+While looking through the FiveThirtyEight package I saw this super interesting dataset, and simply had to use it!
+
+# Plot
+This is a plot of different age groups and the percentage of them that use Cocaine and Horse Tranquilizer (Ketamine). 
+
+```{r warning=FALSE}
+library(Stat2Data)
+library(tidyverse)
+library(fivethirtyeight)
+data("drug_use")
+ggplot(drug_use, aes(x = age, y =  cocaine_use, color = tranquilizer_use)) +
+  geom_point() +
+  labs(title = 'Different Ages and Their Drug Habbits', x = 'Age Group', y = 'Percentage Who Use Cocaine', color = 'Percent Who Use Tranquilizer')
+```
+
+# Conclusions
+People use drugs, but a surprising low percentage of these groups consume these drugs, which is good!
