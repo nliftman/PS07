@@ -25,7 +25,8 @@ library(Stat2Data)
 library(tidyverse)
 library(fivethirtyeight)
 ```
-```{r warning = FALSE, echo = FALSE}
+
+```{r}
 data("drug_use")
 ggplot(drug_use, aes(x = age, y =  cocaine_use, color = tranquilizer_use)) +
   geom_point() +

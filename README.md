@@ -27,6 +27,13 @@ use from different age groups.
 
 Check out this sick plot\!
 
+``` r
+data("drug_use")
+ggplot(drug_use, aes(x = age, y =  cocaine_use, color = tranquilizer_use)) +
+  geom_point() +
+  labs(title = 'Different Ages and Their Drug Habbits', x = 'Age Group', y = 'Percentage Who Use Cocaine', color = 'Percent Who Use Tranquilizer')
+```
+
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ## Conclusions
